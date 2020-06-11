@@ -12,15 +12,13 @@ class App extends React.Component {
     this.state = {
       businesses: []
     };
-
     this.searchYelp = this.searchYelp.bind(this);
   }
 
   searchYelp(term, location, sortBy) {
-    Yelp.search(term, location, sortBy)
-    .then(businesses => {
+    Yelp.search(term, location, sortBy).then((businesses) => {
       this.setState({
-        businesses: this.state.businesses
+        businesses: businesses
       })
     })
 
