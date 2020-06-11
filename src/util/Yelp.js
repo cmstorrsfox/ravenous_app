@@ -1,12 +1,10 @@
-const apiKey = '9Qpdp-8t7mkFJbHj54sQjsshIhcLfyUnMlDi6fRc9o3-5TZkHHmg4rT0o5kHk-YRrW5FdIPRjSHup4k-zPUVG9oiblvU5oXFo5y2bUnmCN0OQSN66tALwThjkuLhXnYx//API Key - 9Qpdp-8t7mkFJbHj54sQjsshIhcLfyUnMlDi6fRc9o3-5TZkHHmg4rT0o5kHk-YRrW5FdIPRjSHup4k-zPUVG9oiblvU5oXFo5y2bUnmCN0OQSN66tALwThjkuLhXnYx';
+const apiKey = 'pJFALKeuCJvEATiAmRH2acc-7rtAE4fL9WZQ6bUGblrCdWtszly8z1GtzEVefu5BuUJ50d9tzYfD9dv3wX7tqUaNao7t3HwifiJ7TlA8Hmhyl5K9cn6DmX1cufnhXnYx';
 
-const yelp = {
-
+const Yelp = {
     search(term, location, sortBy) {
         return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
-            headers: {
-                Authorization: `Bearer ${apiKey}`
-            }
+            headers: 
+            {Authorization: `Bearer ${apiKey}`}
         })
         .then(response => {
             return response.json();
